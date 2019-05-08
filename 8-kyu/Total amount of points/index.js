@@ -78,6 +78,12 @@ const points = games =>
 // Short Solution
 const points = games => games.reduce((total, [x, _, y]) => total + (x > y ? 3 : x === y), 0)
 
+// const points = a => a.reduce((r, e) => {
+//   const x = e[0];
+//   const y = e[2];
+//   return r + (x > y ? 3 : x < y ? 0 : 1);
+// }, 0);
+
 // const points=games=>games.reduce((output,current)=>{
 //   return output += current[0]>current[2] ? 3 : current[0]===current[2] ? 1 : 0;
 // },0)
