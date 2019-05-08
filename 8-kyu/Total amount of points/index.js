@@ -58,6 +58,23 @@ const points = games =>
 //   }, 0);
 // }
 
+// const points = games => games
+//   .map(str => str.split(':').map(Number))      // parse
+//   .map(([x, y]) => x > y ? 3 : x < y ? 0 : 1)  // determine points
+//   .reduce((sum, points) => sum + points, 0);   // sum points
+
+// function points(games) {
+//   var sum=0;
+//   for (var i=0; i<games.length; ++i)
+//   {
+//     if (games[i][0]>games[i][2])
+//       sum+=3;
+//     if (games[i][0]==games[i][2])
+//       sum+=1;
+//   }
+//   return sum;
+// }
+
 // Short Solution
 const points = games => games.reduce((total, [x, _, y]) => total + (x > y ? 3 : x === y), 0)
 
