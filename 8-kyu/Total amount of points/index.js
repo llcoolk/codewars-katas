@@ -42,8 +42,28 @@ const points = games =>
   }, 0)
 */
 
+// function points(games) {
+//   return games.reduce((output,current)=>{
+//     let x = parseInt(current[0]);
+//     let y = parseInt(current[2]);
+//     let value= x>y ? 3 : x===y ? 1 : 0;
+//     return output+value;
+//   },0)
+// }
+
+// function points(games) {
+//   return games.reduce((current, element) => {
+//     let arraySplit = element.split(':');
+//     return (arraySplit[0] > arraySplit[1]) ? current += 3 : (arraySplit[0] < arraySplit[1]) ? current : current += 1;
+//   }, 0);
+// }
+
 // Short Solution
 const points = games => games.reduce((total, [x, _, y]) => total + (x > y ? 3 : x === y), 0)
+
+// const points=games=>games.reduce((output,current)=>{
+//   return output += current[0]>current[2] ? 3 : current[0]===current[2] ? 1 : 0;
+// },0)
 
 // Function Export
 module.exports = points
