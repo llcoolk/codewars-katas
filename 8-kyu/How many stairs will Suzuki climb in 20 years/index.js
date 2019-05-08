@@ -40,6 +40,16 @@
 //   return 20 * stairPerDayArr.reduce((accum, totalDayStairCount) => accum += totalDayStairCount)
 // }
 
+// function stairsIn20(a) {
+//   return 20 * a.reduce((s, a) => s + a.reduce((s, n) => s + n, 0), 0);
+// }
+
+// function stairsIn20(s){
+//   var arr = [].concat(...s)
+//   var newArr = [].concat(...arr)
+//   return newArr.reduce((a, b) => a+b)*20
+// }
+
 const stairsIn20 = s => s.reduce((arr, day) => arr.concat(...day), []).reduce((total, stairs) => total + stairs, 0) * 20
 
 // Function Export
