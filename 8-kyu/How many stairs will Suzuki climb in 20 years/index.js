@@ -33,10 +33,14 @@
 */
 
 // Long Solution
-const stairsIn20 = s =>
-  s
-    .reduce((arr, day) => arr.concat(...day), [])
-    .reduce((total, stairs) => total + stairs, 0) * 20
+
+// function stairsIn20(s){
+//   let stairPerDayArr = s.map(dayOfTheWeek => dayOfTheWeek
+//       .reduce((accum, stairCount) => accum += stairCount))
+//   return 20 * stairPerDayArr.reduce((accum, totalDayStairCount) => accum += totalDayStairCount)
+// }
+
+const stairsIn20 = s => s.reduce((arr, day) => arr.concat(...day), []).reduce((total, stairs) => total + stairs, 0) * 20
 
 // Function Export
 module.exports = stairsIn20
